@@ -14,6 +14,7 @@
 [ ] impliment login
 [ ] update password
 [ ] todo list
+[ ] add favicon
 
 ## Backend
 
