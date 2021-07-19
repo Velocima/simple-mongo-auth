@@ -17,7 +17,7 @@ services:
     image: mongo:latest
     volumes:
       - 'mongodata:/var/lib/mongodb/data'
-      - './db/seeds.js:/docker-entrypoint-initdb.d/seeds.js:ro'
+      - './db/setup.js:/docker-entrypoint-initdb.d/seeds.js:ro'
     environment:
       - MONGO_INITDB_ROOT_USERNAME=max
       - MONGO_INITDB_DATABASE=todos
