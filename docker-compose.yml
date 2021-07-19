@@ -2,7 +2,7 @@ version: '3'
 services:
   server:
     image: node:latest
-    ports: 
+    ports:
       - 5000:5000
     environment:
       - DB_NAME=todos
@@ -18,9 +18,9 @@ services:
     volumes:
       - 'mongodata:/var/lib/mongodb/data'
       - './db/seeds.js:/docker-entrypoint-initdb.d/seeds.js:ro'
-      environment: 
-        - MONGO_INITDB_ROOT_USERNAME=max
-        - MONGO_INITDB_DATABASE=todos
-        - MONGO_INITDB_ROOT_PASSWORD=notsosecret
-volumes: 
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=max
+      - MONGO_INITDB_DATABASE=todos
+      - MONGO_INITDB_ROOT_PASSWORD=notsosecret
+volumes:
   mongodata:
